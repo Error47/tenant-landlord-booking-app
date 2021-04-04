@@ -14,7 +14,7 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: 
+  password:
   host: localhost
 
 development:
@@ -50,6 +50,7 @@ test:
 #
 production:
   <<: *default
-  database: tenant_landlord_production
+  database: tenant_landlord
   username: tenant_landlord
-  password: <%= ENV['TENANT_LANDLORD_DATABASE_PASSWORD'] %>
+  password: admin@123
+  host: www.db4free.net
